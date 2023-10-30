@@ -29,3 +29,20 @@ pro.then((data) => {
 }).catch((err) => {
     console.log(err)
 })
+
+
+
+// another json promise & reslove
+
+let pro1 = new Promise((reslove, reject) =>{
+    let worldCup = 'Pakistan'
+    if(worldCup == 'Pakistan'){
+        reslove('jeet gaya')
+    } else {
+        reject('haar gaya')
+    }
+})
+
+// then is a call back function
+pro1.then(data => console.log(data) )
+.catch(error => console.log(error))
